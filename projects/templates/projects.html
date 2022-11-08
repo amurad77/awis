@@ -1,0 +1,129 @@
+
+{% extends "base.html" %}
+{% load static %}
+  
+{% block content %}
+
+
+    <main id="projects">
+        <section class="container">
+
+            <h2>AWiS Projects & Achievements</h2>
+
+
+            {% for i in projects %}
+
+            <div class="row">
+                <div class="col-6">
+                    <p class="project-name">{{i.title}}</p>
+                    <p>{{ i.description|safe }}</p>
+                    
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{{ i.image.url }}" alt="AWiS October Forum">
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+            <!-- <div class="row">
+                <div class="col-6">
+                    <p class="project-name">AWiS Webinars/Seminars</p>
+                    <p>The aim of webinars is to establish strong links between the research and education communities by connecting school students to scientists and experienced professionals working in various places in the world.</p>
+                    <p><b>Since January 2021</b> AWiS has organized</p>
+                    <ul>
+                        <li>27 webinars and seminars for its audience.</li>
+                    </ul>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{% static 'img/projects2.png' %}" alt="AWiS Webinars/Seminars">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p class="project-name">INSPIRE UP! project</p>
+                    <p>The main goal of the projects is to increase the interest of schoolgirls and students in science by showing experienced candidates as role models for the younger generation.</p>
+                    <p><b>Since March 2021</b> AWiS has organized</p>
+                    <ul>
+                        <li>31 Inspire Up sessions for its audience.</li>
+                    </ul>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{% static 'img/projects3.png' %}" alt="INSPIRE UP! project">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p class="project-name">MIND: Mentoring in New Dimensions project</p>
+                    <p>The goal of a mentorship program is to help develop key talent through career advice & workshops.</p>
+                    <p><b>Since August 2021</b> AWiS has mentored AWiS has organized</p>
+                    <ul>
+                        <li>100+ school students and 50+ university students</li>
+                    </ul>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{% static 'img/projects4.png' %}" alt="MIND: Mentoring in New Dimensions project">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p class="project-name">AWiS Young Ambassadors</p>
+                    <p>The main task of our young regional ambassadors is to raise awareness about AWiS within their network at school and neighbourhoods.</p>
+                    <p><b>Since September 2021</b> AWiS has trained AWiS has organized</p>
+                    <ul>
+                        <li>80+ young school girls as ambassadors in 31 regions of the country.</li>
+                    </ul>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{% static 'img/projects5.png' %}" alt="AWiS Young Ambassadors">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p class="project-name">Virtual Conference for Schoolgirls: My Skills, My Choice! Who do I want to be when I grow up!? </p>
+                    <p>The conference took place in <b>July 2021</b> and 80+ schoolgirls appliep. <b>30 successful applicants</b> won the chance to attend the trainings and participate in the virtual scientific conference.</p>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{% static 'img/projects6.png' %}" alt="Virtual Conference for Schoolgirls">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <p class="project-name">FANTASTIC 4 Educational Program</p>
+                    <p>Sponsored by UNFPA and EU Union grants and covered 4 Azerbaijani regions.</p>
+                    <p>Organized between <b>November 2021-February 2022</b>. Out of 600 applications, <b>300 school girls and 150+ parents (mothers & fathers)</b> were selected to participate in the first round.</p>
+                    <p>Out of 300+ applications for the second round, only <b>80 girls</b> were selected to participate in the final pitch.</p>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{% static 'img/projects7.png' %}" alt="FANTASTIC 4 Educational Program">
+                </div>
+            </div> -->
+        </section>
+
+        <div class="pagination container">
+            <ul>
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa-solid fa-angle-left"></i></a></li>
+                {% endif %}
+
+                <li class="active"><a href="#">{{ page_obj.number }}</a></li>
+                <li><a href="#">/</a></li>
+                <li><a href="#">{{ page_obj.paginator.num_pages }}</a></li>
+                <!-- <li><a href="#">...</a></li>
+                <li><a href="#">6</a></li> -->
+
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa-solid fa-angle-right"></i></a></li>
+                {% endif %}
+
+            </ul>
+        </div>
+    </main>
+
+{% endblock %}

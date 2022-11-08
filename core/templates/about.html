@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+  
+{% block content %}
+
+
+    <main id="about-us">
+        <section class="banner container">
+            <div class="row">
+                <div class="col-6">
+                    <h2>Our Story</h2>
+                    <p>An NPO <b>Azerbaijani Women in Science (AWiS)</b> was founded by <b>Gunel Aghabayli</b> in <b>June 2020</b> with the noble aim to create a strong community of Azerbaijani females united by STEM and STEM-related disciplines.</p>
+                    <p>Mrs. Gunel was hugely inspired by the heritage of the <b>Azerbaijani philanthropist H. Z. Taghiyev</b>, who sponsored the building of the first secular school for Muslim girls in the whole Middle East and Russian Empire and who strongly advocated for educating Azerbaijani women. Taghiyev said: <b>“When you educate a boy, you get one educated person. When you educate a girl, you will get an educated family”</b> and we could not agree more!</p>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{% static 'img/about-us-banner.png' %}" alt="Banner image">
+                    <p class="img-desc">Lessons at the Empress Alexandra Russian Muslim Boarding School for Girls, sponsored by H. Z. Taghiyev, 1911.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="achivements">
+            <div class="container">
+                <h3 class="section-title">AWiS achievements:</h3>
+                <div class="achivement-row">
+                    <div class="achivement-box">
+                        <h3>15 projects</h3>
+                        <p>local and international</p>
+                    </div>
+                    <div class="achivement-box">
+                        <h3>10K EUR</h3>
+                        <p>funds<br>raised</p>
+                    </div>
+                    <div class="achivement-box">
+                        <h3>52 females</h3>
+                        <p>AWiS volunteers</p>
+                    </div>
+                    <div class="achivement-box">
+                        <h3>60 girls</h3>
+                        <p>AWiS mentees</p>
+                    </div>
+                    <div class="achivement-box">
+                        <h3>120 girls</h3>
+                        <p>regional ambassadors</p>
+                    </div>
+                    <div class="achivement-box">
+                        <h3>6k+</h3>
+                        <p>social media followers </p>
+                    </div>
+                    <div class="achivement-box">
+                        <h3>50 women</h3>
+                        <p>experts in network</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="board-members container">
+            <div class="row">
+                <div class="col-6">
+                    <h2>AWiS Board Members</h2>
+                    <div class="member-info">
+                        <p>Gunel Aghabayli</p>
+                        <p>CEO, Director</p>
+                    </div>
+                    <p>Gunel is a Doctoral Researcher at the School of Engineering’s Institute for Energy Systems. She has a Bachelor’s degree in Applied Chemistry from Moscow State University. In 2015, Gunel received a government scholarship to pursue her Master’s degree in Chemical Engineering at the University of Birmingham and following this, began her Ph.D. in the School of Engineering at the University of Edinburgh.</p>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{% static 'img/gunel-aghabayli.png' %}" alt="Gunel Aghabayli">
+                </div>            
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="member-info">
+                        <p>Ravan Mammadov</p>
+                        <p>Vice Chair & Business Development Manager</p>
+                    </div>
+                    <p>Process & Project Engineer with 8 years of engineering systems experience within oil & gas facilities, exclusively on projects for BP and SOCAR. Have a working knowledge of international codes and standards, including API, ASME, ISO, NACE, ANSI, ISA, BP speciﬁc speciﬁcations, and guidance practices. Motivated and dynamic professional with upstream and demonstrated expertise in Brownﬁeld and Greenﬁeld developments through all design life cycle stages comprising Conceptual, FEED, Detailed, and Construction.</p>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="{% static 'img/ravan-mammadov.png' %}" alt="Ravan Mammadov">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <div class="member-info">
+                        <p>Fidan Ismiyeva Miriyeva</p>
+                        <p>Vice Chair and Design Manager</p>
+                    </div>
+                    <p>Fidan is an experienced digital and industrial product designer currently working in Berlin. She graduated from the Faculty of Industrial Product Design at the Middle East Technical University of Turkey in 2013-2017 and obtained her Design and Engineering MSc degree from the Politecnico di Milano University in Italy with the "Invest Your Talent in Italy" Scholarship in 2020. During her studies, she worked as a designer in well-known corporate companies, start-ups, and design studios.</p>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="#" alt="Fidan Ismiyeva Miriyeva">
+                </div>
+            </div>
+        </section>
+
+        <section class="coreteam container"> 
+            <h2>AWiS Core Team</h2>
+            <p>Together with the core team members since 2020 more than 50 young Azerbaijanis (full list <a href="#">here</a>) have contributed to AWiS mission. You can join us as well!</p>
+            <a href="#" class="more">Opportunities <i class="fa-solid fa-angle-right"></i></a>
+
+            <div class="row">
+                <div class="col-4">
+                    <div>
+                        <div class="coreteam-img" style="background-image: url('{% static 'img/vajiyya-aliyeva.png' %}');"></div>
+                        <p class="coreteam-name">Vajiyya Aliyeva</p>
+                        <p>HR and Project Manager</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <div class="coreteam-img" style="background-image: url('{% static 'img/heyran-hajiyeva.png' %}');"></div>
+                        <p class="coreteam-name">Heyran Hajiyeva</p>
+                        <p>Project Manager</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <div class="coreteam-img" style="background-image: url('{% static 'img/gulay-aliyeva.png' %}');"></div>
+                        <p class="coreteam-name">Gulay Aliyeva</p>
+                        <p>Project Coordinator</p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <div class="coreteam-img" style="background-image: url('{% static 'img/lala-alizade.png' %}');"></div>
+                        <p class="coreteam-name">Lala Alizada</p>
+                        <p>Project Coordinator</p>     
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <div class="coreteam-img" style="background-image: url('{% static 'img/nazrin-mamedova.png' %}');"></div>
+                        <p class="coreteam-name">Nazrin Mammadova</p>
+                        <p>Graphic Designer</p>    
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div>
+                        <div class="coreteam-img" style="background-image: url('{% static 'img/huseyin-gahramanov' %}   ');"></div>
+                        <p class="coreteam-name">Huseyin Gahramanov</p>
+                        <p>Photographer and Videographer</p>    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>                    
+
+
+{% endblock %}

@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+/**************** GENERAL CSS ****************/
+a {
+    text-decoration: none;
+}
+
+ul {
+   margin: 0; 
+   padding: 0;
+   list-style: none;
+}
+
+
+/**************** NAVBAR ****************/
+header {
+    padding: 100px 0 16px;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 40px;
+    padding: 10.5px 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #475569;
+    border-bottom: 3px solid transparent;
+}
+nav ul li.active {
+    color: #4F46E5;
+    border-bottom-color: #4F46E5;
+}
+nav ul li:last-child {
+    margin-right: 0;
+}
+nav ul li a {
+    color: inherit;
+    transition: 0.5s;
+}
+nav ul li a:hover {
+    color: #000000;
+}
+nav ul li.active a:hover {
+    color: #4F46E5;
+}
+
+
+/**************** BANNER SECTION ****************/
+main {
+    margin-top: 170px;
+}
+.banner {
+    padding: 100px 0;
+}
+.banner h1 {
+    font-size: 4.8rem;
+    font-weight: 600;
+    line-height: 5.8rem;
+    margin-bottom: 32px;
+    color: #475569;
+}
+.banner p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 32px;
+}
+.banner form input,
+footer form input {
+    width: 300px;
+    padding: 8px 10px;
+    margin-right: 16px;
+    background: #FFFFFF;
+    border: 1px solid #94A3B8;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    transition: 0.5s;
+}
+.banner form input::placeholder,
+footer form input::placeholder {
+    color: #94A3B8;
+}
+.banner form input:focus-visible,
+footer form input:focus-visible {
+    outline: none;
+    border-color: #6366F1;
+}
+.banner form button,
+footer form button {
+    padding: 8px 12px;
+    background: #6366F1;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #6366F1;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+
+/**************** AREAS SECTION ****************/
+.areas {
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+section .section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.areas .box {
+    background-color: #EEF2FF;
+    border-radius: 8px;
+    padding: 16px;
+    height: 100%;
+}
+.areas .box h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: 12px;
+}
+.areas .box ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    margin-top: 24px;
+}
+.areas .box ul li {
+    font-size: 1.6rem;
+}
+
+
+
+/**************** HOMEPAGE SECTIONS ****************/
+
+.about-us .row {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.about-us .section-text h2,
+.news .section-text h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 4rem;
+    margin-bottom: 32px;
+}
+.about-us .section-text p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 32px;
+}
+.about-us .section-text .more,
+#about-us .more {
+    padding: 8px 12px;
+    background: #F1F5F9;
+    color: #0F172A;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 2rem;
+    transition: 0.5s;
+}
+.about-us .section-text .more i,
+#about-us .more i {
+    margin-left: 12px;
+}
+.about-us .section-text .more:hover,
+#about-us .more:hover {
+    background: #e1e6eb;
+}
+.about-us .section-img {
+    text-align: right;
+}
+
+.partners {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.news {
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+.owl-carousel {
+    margin-top: 28px;
+}
+.news-box {
+    padding: 16px;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+}
+.news-box .news-img {
+    background-color: #E2E8F0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+.news-box .news-date {
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #475569;
+}
+.news-box .news-title {
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    color: #0F172A;
+}
+
+/**************** FOOTER SECTIONS ****************/
+footer {
+    padding: 100px 0;
+    background-image: url('../img/icons/footer-bg.png');
+}
+footer > div {
+    background-color: #ffffff;
+    color: #212121;
+    border-radius: 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+footer .row {
+    margin: 0 100px;
+}
+footer .col-7 {
+    padding-right: 100px;
+}
+footer img {
+    margin-bottom: 32px;
+}
+footer p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin: 0;
+}
+footer form {
+    margin-top: 24px;
+}
+footer .social-media p {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+footer .social-media ul li {
+    display: inline-block;
+}
+footer .social-media ul li a {
+    color: #0F172A;
+    margin-right: 20px;
+}
+footer .social-media ul li a i {
+    font-size: 1.6rem;
+}
+footer .copyright {
+    margin-top: 65px;
+    color: #9B9B9A;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+
+
+/**************** ABOUT US PAGE ****************/
+#about-us .banner {
+    padding-bottom: 120px;
+}
+#about-us .banner h2,
+#about-us .board-members h2,
+#about-us .coreteam h2,
+#projects h2,
+#news h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 4rem;
+    margin-bottom: 24px;
+}
+#about-us .banner p {
+    margin-bottom: 0;    
+}
+#about-us .banner .img-desc {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #2E3131;
+    margin: 4px 0 0 auto;
+    max-width: 372px;
+    text-align: left;
+}
+
+#about-us .achivements {
+    background-color: #F8FAFC;
+    padding: 60px 0;
+    margin-bottom: 100px;
+}
+#about-us .achivement-row {
+    display: flex;
+    justify-content: space-between;
+}
+#about-us .achivement-box {
+    width: 120px;
+    padding: 32px 16px 12px;
+    background-color: #ffffff;
+    color: #0F172A;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    text-align: center;
+}
+#about-us .achivement-box h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    margin-bottom: 16px;
+}
+#about-us .achivement-box p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+#about-us .board-members .row {
+    padding: 80px 0;
+}
+#about-us .board-members p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+#about-us .board-members .member-info {
+    margin-bottom: 25px;
+}
+#about-us .board-members .member-info p {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+    margin-bottom: 0;
+}
+#about-us .board-members img {
+    background: linear-gradient(107.5deg, #E0E7FF 0%, #DAFFF6 119.37%);
+    border-radius: 8px;
+}
+
+#about-us .coreteam {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#about-us .coreteam > p {
+    width: 50%;
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+#about-us .coreteam > p a {
+    color: inherit;
+    text-decoration: underline;
+}
+#about-us .coreteam .row {
+    margin: 40px -18px;
+}
+#about-us .coreteam .col-4 {
+    padding: 18px;
+    text-align: center;
+}
+#about-us .coreteam .col-4 > div {
+    height: 100%;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    padding: 16px;
+}
+#about-us .coreteam .coreteam-img {
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    position: relative;
+}
+#about-us .coreteam .coreteam-img::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(107.5deg, #E0E7FF 0%, #DAFFF6 119.37%);
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+#about-us .coreteam .col-4 .coreteam-name {
+    margin: 12px 0 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    color: #0F172A;
+}
+#about-us .coreteam .col-4 p:last-child {
+    margin: 8px 0 0;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #475569;
+}
+
+
+
+/**************** PROJECTS PAGE ****************/
+#projects {
+    padding-top: 100px;
+}
+#projects .row {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#projects p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 25px;
+}
+#projects p.project-name {
+    font-size: 2rem;
+    font-weight: 600;
+}
+#projects ul {
+    margin-top: -25px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+#projects ul li {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+}
+
+.pagination {
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+.pagination ul {
+    margin: 0 auto;
+    line-height: 4rem;
+}
+.pagination ul li {
+    display: inline-block;
+    margin: 0 3px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #0F172A;
+}
+.pagination ul li:first-child,
+.pagination ul li:last-child {
+    font-size: 1.6rem;
+}
+.pagination ul li a {
+    padding: 10px 16px;
+    color: inherit;
+}
+.pagination ul li:first-child a,
+.pagination ul li:last-child a {
+    padding: 10px;
+}
+.pagination ul li.active a {
+    background: #EEF2FF;
+    color: #4F46E5;
+    border: 1px solid #818CF8;
+    border-radius: 24px;
+}
+
+
+
+/**************** NEWS PAGE ****************/
+#news {
+    padding-top: 100px;
+}
+#news .row {
+    padding: 40px 0;
+    margin-right: -18px;
+    margin-left: -18px;
+}
+#news .news-box {
+    margin: 18px 11px;
+}

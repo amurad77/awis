@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load static %}
+  
+{% block content %}
+
+    <main id="news">
+        <section class="container">
+            <h2>AWiS News & Events</h2>
+            <div class="row">
+
+                {% for i in news %}
+
+                <div class="col-4">
+                    <a href="news-details.html">
+                        <div class="news-box">
+                            <div class="news-img" style="background-image: url( {{i.image.url}} );"></div>
+                            <p class="news-date"> {{ i.created_at }} </p>
+                            <p class="news-title">{{i.title}}</p>
+                        </div>
+                    </a>
+                </div>
+
+                {% endfor %}
+
+                <!-- <div class="col-4">
+                    <a href="news-details.html">
+                        <div class="news-box">
+                            <div class="news-img" style="background-image: url('{% static 'img/news2.png' %}');"></div>
+                            <p class="news-date">15 May, 2021</p>
+                            <p class="news-title">AWiS wins the prestigeous Gender Equality Prize</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="news-details.html">
+                        <div class="news-box">
+                            <div class="news-img" style="background-image: url('{% static 'img/news3.png' %}');"></div>
+                            <p class="news-date">15 May, 2021</p>
+                            <p class="news-title">AWiS wins the prestigeous Gender Equality Prize</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="news-details.html">
+                        <div class="news-box">
+                            <div class="news-img" style="background-image: url('{% static 'img/news4.png' %}');"></div>
+                            <p class="news-date">15 May, 2021</p>
+                            <p class="news-title">AWiS wins the prestigeous Gender Equality Prize</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="news-details.html">
+                        <div class="news-box">
+                            <div class="news-img" style="background-image: url('');"></div>
+                            <p class="news-date">15 May, 2021</p>
+                            <p class="news-title">AWiS wins the prestigeous Gender Equality Prize</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-4">
+                    <a href="news-details.html">
+                        <div class="news-box">
+                            <div class="news-img" style="background-image: url('');"></div>
+                            <p class="news-date">15 May, 2021</p>
+                            <p class="news-title">AWiS wins the prestigeous Gender Equality Prize</p>
+                        </div>
+                    </a>
+                </div> -->
+            </div>
+        </section>
+
+
+        <div class="pagination container">
+            <ul>
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa-solid fa-angle-left"></i></a></li>
+                {% endif %}
+
+                <li class="active"><a href="#">{{ page_obj.number }}</a></li>
+                <li><a href="#">/</a></li>
+                <li><a href="#">{{ page_obj.paginator.num_pages }}</a></li>
+                <!-- <li><a href="#">...</a></li>
+                <li><a href="#">6</a></li> -->
+
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa-solid fa-angle-right"></i></a></li>
+                {% endif %}
+
+            </ul>
+        </div>
+
+
+    </main>
+
+{% endblock %}
