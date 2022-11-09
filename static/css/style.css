@@ -83,6 +83,10 @@ main {
     line-height: 2.8rem;
     margin-bottom: 32px;
 }
+.banner form,
+footer form {
+    position: relative;
+}
 .banner form input,
 footer form input {
     width: 300px;
@@ -114,6 +118,15 @@ footer form button {
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 20px;
+}
+#error-list,
+#error-list2 {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 38px;
+    left: 0;
 }
 
 

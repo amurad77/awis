@@ -11,23 +11,12 @@
                     <h1>Educated <span style="color: #6366F1;">Girl</span><br>Educated <span style="color: #2DD4BF;">Generation</span></h1>
                     <p>Azerbaijani Women in Science (AWiS) aims to bring more Azerbaijani girls into STEM and STEM-related disciplines and contribute to building educated Azerbaijani society.</p>
                     <p>Join our mailing list to receive updates on our new projects, special opportunities and more!</p>
-
-
-                            <form
-                                action="#" id='form-subscribe' class="form-inline subscribe-form auth-form needs-validation" method="POST"
-                                id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-
-                                    {% csrf_token %}
-                                    <input type="text" name="email" name="EMAIL" id="mce-EMAIL2"
-                                        placeholder="Enter your email" required="required">
-                                    
-                                <button  type="submit" >subscribe</button>
-                                
-                                <ul id="error-list2" style="list-style-type: none">
-
-                                </ul>
-                            </form> 
-
+                    <form action="#" id='form-subscribe' method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                        {% csrf_token %}
+                        <input type="email" name="email" id="mce-EMAIL2" placeholder="Your e-mail" required>
+                        <button type="submit">Subscribe</button>
+                        <ul id="error-list2"></ul>
+                    </form>
                 </div>
                 <div class="col-6 text-center">
                     <img src="{% static 'img/icons/banner-icon.svg' %}" alt="Banner icon">
@@ -214,11 +203,8 @@
         </section>
     </main>
 
- 
-
     <script src="{% static 'owlcarousel/js/jquery.min.js' %}"></script>
     <script src="{% static 'owlcarousel/js/owl.carousel.min.js' %}"></script>
-
 
     <script>
         var owl = $('.owl-carousel');
