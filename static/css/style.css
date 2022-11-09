@@ -165,7 +165,6 @@ section .section-title {
 
 
 /**************** HOMEPAGE SECTIONS ****************/
-
 .about-us .row {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -208,6 +207,11 @@ section .section-title {
 .partners {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+.partners img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 50px;
 }
 
 .news {
