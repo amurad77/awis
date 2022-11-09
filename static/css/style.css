@@ -88,7 +88,10 @@ footer form {
     position: relative;
 }
 .banner form input,
-footer form input {
+footer form input,
+.interest-form form input,
+.interest-form form select,
+.interest-form form textarea {
     width: 300px;
     padding: 8px 10px;
     margin-right: 16px;
@@ -100,16 +103,22 @@ footer form input {
     transition: 0.5s;
 }
 .banner form input::placeholder,
-footer form input::placeholder {
+footer form input::placeholder,
+.interest-form form input::placeholder,
+.interest-form form textarea::placeholder {
     color: #94A3B8;
 }
 .banner form input:focus-visible,
-footer form input:focus-visible {
+footer form input:focus-visible,
+.interest-form form input:focus-visible,
+.interest-form form select:focus-visible,
+.interest-form form textarea:focus-visible {
     outline: none;
     border-color: #6366F1;
 }
 .banner form button,
-footer form button {
+footer form button,
+.interest-form form button {
     padding: 8px 12px;
     background: #6366F1;
     color: #FFFFFF;
@@ -321,7 +330,8 @@ footer .copyright {
 #about-us .coreteam h2,
 #projects h2,
 #news h2,
-#news-details h2 {
+#news-details h2,
+#opportunities h2 {
     font-size: 3rem;
     font-weight: 600;
     line-height: 4rem;
@@ -573,4 +583,25 @@ footer .copyright {
 }
 #news-details .news-link a i {
     margin: 0 16px;
+}
+
+
+
+/**************** OPPORTUNITIES PAGE ****************/
+.interest-form {
+    padding: 50px 0;
+}
+.interest-form .col-5 {
+    padding-right: 30px;
+}
+.interest-form input,
+.interest-form select,
+.interest-form textarea {
+    width: 100% !important;
+    margin-bottom: 24px;
+}
+.interest-form textarea {
+    margin-bottom: 0;
+    height: 223px;
+    resize: none;
 }
