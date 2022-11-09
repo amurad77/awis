@@ -320,7 +320,8 @@ footer .copyright {
 #about-us .board-members h2,
 #about-us .coreteam h2,
 #projects h2,
-#news h2 {
+#news h2,
+#news-details h2 {
     font-size: 3rem;
     font-weight: 600;
     line-height: 4rem;
@@ -528,4 +529,48 @@ footer .copyright {
 }
 #news .news-box {
     margin: 18px 11px;
+}
+
+
+#news-details {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#news-details img {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 64px;
+}
+#news-details h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 4rem;
+}
+#news-details p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    color: #000000;
+}
+#news-details .news-date {
+    font-weight: 600;
+    color: #475569;
+    margin: 24px 0;
+    text-transform: uppercase;
+}
+
+
+#news-details .news-link {
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+#news-details .news-link a {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #0F172A;
+    text-decoration: none;
+}
+#news-details .news-link a i {
+    margin: 0 16px;
 }
