@@ -524,6 +524,15 @@ footer .copyright {
     font-size: 1.8rem;
     line-height: 2.8rem;
 }
+#projects .project-img > div {
+    width: 372px;
+    height: 372px;
+    border-radius: 8px;
+    margin-left: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .pagination {
     padding-top: 80px;

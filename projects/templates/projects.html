@@ -14,8 +14,8 @@
                     <p class="project-name">{{i.title}}</p>
                     <p>{{ i.description|safe }}</p>  
                 </div>
-                <div class="col-6 text-end">
-                    <img src="{{ i.image.url }}" alt="AWiS October Forum">
+                <div class="col-6 text-end project-img">
+                    <div style="background-image: url('{{ i.image.url }}');"></div>
                 </div>
             </div>
             {% endfor %}
