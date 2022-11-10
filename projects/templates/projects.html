@@ -4,28 +4,21 @@
   
 {% block content %}
 
-
     <main id="projects">
         <section class="container">
-
             <h2>AWiS Projects & Achievements</h2>
 
-
             {% for i in projects %}
-
             <div class="row">
                 <div class="col-6">
                     <p class="project-name">{{i.title}}</p>
-                    <p>{{ i.description|safe }}</p>
-                    
+                    <p>{{ i.description|safe }}</p>  
                 </div>
                 <div class="col-6 text-end">
                     <img src="{{ i.image.url }}" alt="AWiS October Forum">
                 </div>
             </div>
-
             {% endfor %}
-
 
             <!-- <div class="row">
                 <div class="col-6">
@@ -109,19 +102,14 @@
         <div class="pagination container">
             <ul>
                 {% if page_obj.has_previous %}
-                <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa-solid fa-angle-left"></i></a></li>
+                <li class="arrow"><a href="?page={{ page_obj.previous_page_number }}"><i class="fa-solid fa-angle-left"></i></a></li>
                 {% endif %}
-
-                <li class="active"><a href="#">{{ page_obj.number }}</a></li>
-                <li><a href="#">/</a></li>
-                <li><a href="#">{{ page_obj.paginator.num_pages }}</a></li>
-                <!-- <li><a href="#">...</a></li>
-                <li><a href="#">6</a></li> -->
-
+                <li class="active"><a class="deactive">{{ page_obj.number }}</a></li>
+                <li><a class="deactive">/</a></li>
+                <li><a class="deactive">{{ page_obj.paginator.num_pages }}</a></li>
                 {% if page_obj.has_next %}
-                <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa-solid fa-angle-right"></i></a></li>
+                <li class="arrow"><a href="?page={{ page_obj.next_page_number }}"><i class="fa-solid fa-angle-right"></i></a></li>
                 {% endif %}
-
             </ul>
         </div>
     </main>

@@ -540,23 +540,22 @@ footer .copyright {
     line-height: 2rem;
     color: #0F172A;
 }
-.pagination ul li:first-child,
-.pagination ul li:last-child {
+.pagination ul li.arrow {
     font-size: 1.6rem;
 }
 .pagination ul li a {
     padding: 10px 16px;
     color: inherit;
 }
-.pagination ul li:first-child a,
-.pagination ul li:last-child a {
+.pagination ul li.arrow a {
     padding: 10px;
 }
 .pagination ul li.active a {
     background: #EEF2FF;
     color: #4F46E5;
     border: 1px solid #818CF8;
-    border-radius: 24px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 
