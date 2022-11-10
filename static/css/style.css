@@ -385,7 +385,7 @@ footer .copyright {
 }
 #about-us .achivement-box {
     width: 120px;
-    padding: 32px 16px 12px;
+    padding: 32px 12px 12px;
     background-color: #ffffff;
     color: #0F172A;
     border: 1px solid #CBD5E1;
@@ -401,6 +401,14 @@ footer .copyright {
 #about-us .achivement-box p {
     font-size: 1.4rem;
     line-height: 2rem;
+}
+
+#about-us .partners {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+#about-us .partners .col-2 {
+    margin-bottom: 60px;
 }
 
 #about-us .board-members .row {

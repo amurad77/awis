@@ -3,7 +3,6 @@
   
 {% block content %}
 
-
     <main id="about-us">
         <section class="banner container">
             <div class="row">
@@ -25,34 +24,76 @@
                 <div class="achivement-row">
                     {% for i in statitics %}
                     <div class="achivement-box">
-                        <h3>{{i.projects}} projects</h3>
+                        <h3><span id="value1">0</span><span id="value01" style="display: none;">{{i.projects}}</span> projects</h3>
                         <p>local and international</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>{{i.eur}}K EUR</h3>
+                        <h3><span id="value2">0</span><span id="value02" style="display: none;">{{i.eur}}</span>K EUR</h3>
                         <p>funds<br>raised</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>{{i.females}} females</h3>
+                        <h3><span id="value3">0</span><span id="value03" style="display: none;">{{i.females}}</span> females</h3>
                         <p>AWiS volunteers</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>{{i.girls_mentees}} girls</h3>
+                        <h3><span id="value4">0</span><span id="value04" style="display: none;">{{i.girls_mentees}}</span> girls</h3>
                         <p>AWiS mentees</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>{{i.girls_regional}} girls</h3>
+                        <h3><span id="value5">0</span><span id="value05" style="display: none;">{{i.girls_regional}}</span> girls</h3>
                         <p>regional ambassadors</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>{{i.followers}}k+</h3>
+                        <h3><span id="value6">0</span><span id="value06" style="display: none;">{{i.followers}}</span>k+</h3>
                         <p>social media followers </p>
                     </div>
                     <div class="achivement-box">
-                        <h3>{{i.women}} women</h3>
+                        <h3><span id="value7">0</span><span id="value07" style="display: none;">{{i.women}}</span> women</h3>
                         <p>experts in network</p>
                     </div>
                     {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="partners container">
+            <h2 class="section-title">Our trusted partners:</h2>
+            <div class="row align-items-center text-center">
+                <div class="col-2">
+                    <img src="{% static 'img/partners/un-women.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/unfpa.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/undp.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/usaid.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/Embassy logo.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/unesco.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/image 114.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/Presidency Logo.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/UFAZ logo.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/femtech.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/gender-hub.png' %}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="{% static 'img/partners/asa.png' %}" alt="">
                 </div>
             </div>
         </section>
@@ -94,7 +135,7 @@
                     <p>Fidan is an experienced digital and industrial product designer currently working in Berlin. She graduated from the Faculty of Industrial Product Design at the Middle East Technical University of Turkey in 2013-2017 and obtained her Design and Engineering MSc degree from the Politecnico di Milano University in Italy with the "Invest Your Talent in Italy" Scholarship in 2020. During her studies, she worked as a designer in well-known corporate companies, start-ups, and design studios.</p>
                 </div>
                 <div class="col-6 text-end">
-                    <img src="#" alt="Fidan Ismiyeva Miriyeva">
+                    <img src="{% static 'img/fidan-ismiyeva-miriyeva.png' %}" alt="Fidan Ismiyeva Miriyeva">
                 </div>
             </div>
         </section>
@@ -149,7 +190,43 @@
                 </div>
             </div>
         </section>
-    </main>                    
+    </main>  
+    
+    <script>
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
 
+        const obj1 = document.getElementById("value1");
+        const value1 = parseInt(document.getElementById("value01").textContent);
+        const obj2 = document.getElementById("value2");
+        const value2 = parseInt(document.getElementById("value02").textContent);
+        const obj3 = document.getElementById("value3");
+        const value3 = parseInt(document.getElementById("value03").textContent);
+        const obj4 = document.getElementById("value4");
+        const value4 = parseInt(document.getElementById("value04").textContent);
+        const obj5 = document.getElementById("value5");
+        const value5 = parseInt(document.getElementById("value05").textContent);
+        const obj6 = document.getElementById("value6");
+        const value6 = parseInt(document.getElementById("value06").textContent);
+        const obj7 = document.getElementById("value7");
+        const value7 = parseInt(document.getElementById("value07").textContent);
+        animateValue(obj1, 0, value1, 3000);
+        animateValue(obj2, 0, value2, 3000);
+        animateValue(obj3, 0, value3, 3000);
+        animateValue(obj4, 0, value4, 3000);
+        animateValue(obj5, 0, value5, 3000);
+        animateValue(obj6, 0, value6, 3000);
+        animateValue(obj7, 0, value7, 3000);
+    </script>
 
 {% endblock %}
