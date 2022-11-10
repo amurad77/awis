@@ -6,7 +6,7 @@ from django.forms import ModelForm, Select, TextInput
 
 
 FORM_CHOICES= [
-    ('1', 'Select the role *'),
+    ('1', 'Select the role*'),
     ('2', 'Volunteer'),
     ('3', 'Partner'),
     ('4', 'Mentor'),
@@ -44,28 +44,19 @@ class InvolvedForm(forms.ModelForm):
         )
         widgets = {
             'name': forms.TextInput(attrs={
-                                    'class': 'form-control',
-                                    'placeholder': 'Name Surname *',
+                                    'placeholder': 'Name Surname*',
                                     'type': 'text'
-                                    
                                 }),
             'email': forms.EmailInput(attrs={
-                                    'class': 'form-control',
-                                    'placeholder': 'E-mail Address *',
+                                    'placeholder': 'E-mail address*',
                                     'type': 'email'
-                                    
                                 }),
             'number': forms.TextInput(attrs={
-                                    'class': 'form-control',
-                                    'placeholder': 'Phone Number *',
-                                    'type': 'text'
+                                    'placeholder': 'Phone number*',
+                                    'type': 'tel'
                                 }),
-            'membership_type': Select(attrs={
-                                    'class': 'form-control',
-                                }),
+            'membership_type': Select(attrs={}),
             'message': forms.Textarea(attrs={
-                                    'class': 'form-control',
-                                    'placeholder': 'Tell uss more...',
-
+                                    'placeholder': 'Tell us more...',
                                 })
         }

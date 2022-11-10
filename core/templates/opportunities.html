@@ -1,12 +1,8 @@
 
-
 {% extends "base.html" %}
 {% load static %}
   
 {% block content %}
-
-
-
 
     <main id="opportunities">
         <section class="banner container">
@@ -23,26 +19,112 @@
             </div>
         </section>
 
-        <section class="roles"></section>
+        <section class="areas container">
+            <h3>We want Azerbaijani females to be successful in the following three areas:</h3>
+            <div class="row">
+                <div class="col-4">
+                    <div class="box">
+                        <div>
+                            <h4>Volunteer</h4>
+                        </div>
+                        <ul>
+                            <li>If you are interested in gaining volunteering experience in project execution, SMM, or design, AWiS might be a right place for you!</li>
+                            <li>We are always eager to welcome responsible talents, who are ready to spare their time and effort to contribute to our mission!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="box">
+                        <div>
+                            <h4>Partner</h4>
+                        </div>
+                        <ul>
+                            <li>Partner with us if you are an organization or an entrepreneur and are considering to implement an educational program. </li>
+                            <li>AWiS has a reliable portfolio and references of local and international communities to prove that you won’t regret doing a project together!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="box">
+                        <div>
+                            <h4>Mentor</h4>
+                        </div>
+                        <ul>
+                            <li>AWiS staff and friends are mentoring schoolgirls from the regions as well as female university students from STEM disciplines. </li>
+                            <li>We invite you to positively impact to the lives of youth with your professional expertise and experience in industry or academia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="box">
+                        <div>
+                            <h4>Donor</h4>
+                        </div>
+                        <ul>
+                            <li>Currently, AWiS sustain the activity thanks to the grant projects and service fees for other orgs, while staff works on voluntary basis.</li>
+                            <li>Through donations we will be able to do even more for Azerbaijani school girls’ and young women’s education and development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="box">
+                        <div>
+                            <h4>Fellow (coming soon)</h4>
+                        </div>
+                        <ul>
+                            <li>We at AWiS believe in the power of community and knowledge-sharing.</li>
+                            <li>Become our fellow and benefit form AWiS perks for professionals and experts on periodic subscription!</li>
+                            <li>Subscribe the earliest to know the updates and get the best deal!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="box">
+                        <div>
+                            <h4>Other role</h4>
+                        </div>
+                        <ul>
+                            <li>If you did not find the suitable role, feel free to reach out to us anyways to share suggestion, story or consern about AWiS, education or career.</li>
+                            <li>Rest assured we read all messages and answer all of them!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="interest-form container">
+            <h3>Fill the form to let us know about your interest in AWiS</h3>
             <form action="#" method="post">
                 <div class="row">
                     <div class="col-5">
                         {% csrf_token %}
-                        {{form.name}}
+                        <div class="form-input">
+                            {{form.name}}
+                            <i class="fa-solid fa-user"></i>
+                        </div>
                         <!-- <input type="text" placeholder="Name Surname*" required> -->
-                        {{form.email}}
+                        <div class="form-input">
+                            {{form.email}}
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
                         <!-- <input type="text" placeholder="E-mail address*" required> -->
-                        {{form.number}}
+                        <div class="form-input">
+                            {{form.number}}
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
                         <!-- <input type="tel" placeholder="Phone number"> -->
+                        <div class="form-input">
+                            {{form.membership_type}}
+                            <i class="fa-solid fa-id-card"></i>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
                         <!-- <select required> -->
                             <!-- <option value="volunteer">Volunteer</option>
                             <option value="partner">Partner</option>
                             <option value="mentor">Mentor</option>
                             <option value="donor">Donor</option> -->
-                            {{ form.membership_type }}
-
                         <!-- </select> -->
                     </div>
                     <div class="col-7">
@@ -58,7 +140,76 @@
                 </div>
             </form>
         </section>
+
+        <section class="partners container">
+            <h2 class="section-title">Our trusted partners:</h2>
+            <div class="partners-owl-carousel owl-carousel owl-theme">
+                <div class="item">
+                    <img src="{% static 'img/partners/un-women.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/unfpa.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/undp.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/usaid.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/Embassy logo.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/unesco.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/image 114.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/Presidency Logo.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/UFAZ logo.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/femtech.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/gender-hub.png' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'img/partners/asa.png' %}" alt="">
+                </div>
+            </div>
+        </section>
     </main>
 
+    <script src="{% static 'owlcarousel/js/jquery.min.js' %}"></script>
+    <script src="{% static 'owlcarousel/js/owl.carousel.min.js' %}"></script>
 
-    {% endblock %}
+    <script>
+        var partnersOwl = $('.partners-owl-carousel');
+        partnersOwl.owlCarousel({
+            loop:true,
+            nav:false,
+            dragClass: true,
+            margin:0,
+            dots:false,
+            autoplay:true,
+            autoplayTimeout:2000,
+            autoplayHoverPause:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1200:{
+                    items:6
+                }
+            }
+        });
+    </script>
+
+{% endblock %}

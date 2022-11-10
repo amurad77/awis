@@ -151,11 +151,13 @@ footer form button:hover,
     margin-top: 100px;
     margin-bottom: 150px;
 }
-section .section-title {
+section .section-title,
+#opportunities h3 {
     font-size: 1.8rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 48px;
+    color: #475569;
 }
 .areas .box {
     background-color: #F1FAFF;
@@ -629,20 +631,98 @@ footer .copyright {
 
 
 /**************** OPPORTUNITIES PAGE ****************/
+#opportunities .areas {
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+#opportunities .areas .row {
+    margin-bottom: 50px;
+}
+#opportunities .areas .box {
+    padding: 28px 16px;
+    margin: 0 8px;
+}
+#opportunities .areas .col-4:first-child .box {
+    margin-left: 0;
+}
+#opportunities .areas .col-4:last-child .box {
+    margin-right: 0;
+}
+#opportunities .areas .box h4 {
+    margin-top: 16px;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+    color: #0F172A;
+    text-align: center;
+}
+
 .interest-form {
     padding: 50px 0;
+}
+.interest-form form {
+    padding-top: 12px;
 }
 .interest-form .col-5 {
     padding-right: 30px;
 }
+.interest-form .form-input {
+    position: relative;
+}
 .interest-form input,
-.interest-form select,
-.interest-form textarea {
+.interest-form select {
+    font-size: 1.6rem !important;
+    line-height: 2.4rem !important;
     width: 100% !important;
     margin-bottom: 24px;
+    padding-left: 30px !important;
+}
+.interest-form .form-input i {
+    font-size: 1.6rem;
+    line-height: 4.2rem;
+    color: #94A3B8;
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+.interest-form .form-input:nth-child(5) i:last-child {
+    left: auto;
+    right: 10px;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #94A3B8;
 }
 .interest-form textarea {
+    font-size: 1.6rem !important;
+    line-height: 2.4rem !important;
+    width: 100% !important;
+    padding-left: 10px;
     margin-bottom: 0;
-    height: 223px;
+    height: 240px;
     resize: none;
+}
+.interest-form .row > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.interest-form button {
+    order: 2;
+    margin-left: auto;
+}
+.interest-form .text-success {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: #0F172A !important;
+    order: 1;
+}
+
+#opportunities .partners {
+    padding-bottom: 50px;
 }

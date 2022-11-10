@@ -6,7 +6,7 @@ from django.utils.translation import gettext as _
 
 
 MODEL_CHOICES= [
-    ('1', 'Select the role *'),
+    ('1', 'Select the role*'),
     ('2', 'Volunteer'),
     ('3', 'Partner'),
     ('4', 'Mentor'),
@@ -33,7 +33,7 @@ class Involved(models.Model):
     name = models.CharField('Ad', max_length = 256)
     email = models.EmailField('Email', max_length = 50)
     number = models.CharField('Telefon nömrəsi', max_length = 20)
-    membership_type = models.CharField('Membership type', choices = MODEL_CHOICES, default = 'Select the role *', max_length = 256)
+    membership_type = models.CharField('Membership type', choices = MODEL_CHOICES, default = 'Select the role*', max_length = 256)
     message = models.TextField('Mesaj', max_length = 5000)
 
     # moderations
