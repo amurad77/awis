@@ -57,7 +57,7 @@ nav ul li a {
     transition: 0.5s;
 }
 nav ul li a:hover {
-    color: #000000;
+    color: #0f172a;
 }
 nav ul li.active a:hover {
     color: #4F46E5;
@@ -114,7 +114,7 @@ footer form input:focus-visible,
 .interest-form form select:focus-visible,
 .interest-form form textarea:focus-visible {
     outline: none;
-    border-color: #6366F1;
+    border-color: #4F46E5;
 }
 .banner form button,
 footer form button,
@@ -127,6 +127,13 @@ footer form button,
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 20px;
+    transition: 0.5s;
+}
+.banner form button:hover,
+footer form button:hover,
+.interest-form form button:hover {
+    background: #4F46E5;
+    border: 1px solid #4F46E5;
 }
 #error-list,
 #error-list2 {
@@ -207,7 +214,7 @@ section .section-title {
 }
 .about-us .section-text .more:hover,
 #about-us .more:hover {
-    background: #e1e6eb;
+    background: #e2e8f0;
 }
 .about-us .section-img {
     text-align: right;
@@ -238,10 +245,18 @@ section .section-title {
 .owl-carousel {
     margin-top: 28px;
 }
+.news-owl-carousel .item {
+    padding-bottom: 50px;
+}
 .news-box {
     padding: 16px;
     border: 1px solid #CBD5E1;
     border-radius: 8px;
+    transition: 0.5s;
+}
+.news-box:hover {
+    border-color: #4F46E5;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .news-box .news-img {
     background-color: #E2E8F0;
@@ -308,9 +323,13 @@ footer .social-media ul li {
 footer .social-media ul li a {
     color: #0F172A;
     margin-right: 20px;
+    transition: 0.5s;
 }
 footer .social-media ul li a i {
     font-size: 1.6rem;
+}
+footer .social-media ul li a:hover {
+    color: #6366f1;
 }
 footer .copyright {
     margin-top: 65px;
