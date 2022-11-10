@@ -158,10 +158,16 @@ section .section-title {
     margin-bottom: 48px;
 }
 .areas .box {
-    background-color: #EEF2FF;
+    background-color: #F1FAFF;
     border-radius: 8px;
     padding: 16px;
     height: 100%;
+}
+.areas .col-4:first-child .box {
+    background-color: #EEF2FF;
+}
+.areas .col-4:last-child .box {
+    background-color: #F0FDFA;
 }
 .areas .box h3 {
     font-size: 1.6rem;
