@@ -20,10 +20,12 @@ from django.urls import path, include
 from .router import router
 from core.views import (
     index,
-    about
+    about,
+    opportunities,
 )
 from news.views import (
-    news
+    news,
+    news_details
 )
 from projects.views import (
     projects
@@ -37,5 +39,7 @@ urlpatterns = [
     path('about/', about),
     path('news/', news),
     path('projects/', projects),
-    path('api/', include(router.urls))
+    path('opportunities/', opportunities),
+    path('api/', include(router.urls)),
+    path('news-detail/<slug:slug>/', news_details, name='news_details')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

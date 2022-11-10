@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import News
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.shortcuts import render, get_object_or_404
+
 
 # Create your views here.
 
@@ -23,3 +25,12 @@ def news(request):
         'page_obj': page_obj,
     }
     return render(request, 'news.html', context)
+
+def news_details(request, slug):
+    news = get_object_or_404(News, slug = slug)
+
+    context = {
+        'news' : news
+    }
+
+    return render(request, 'news-details.html', context)

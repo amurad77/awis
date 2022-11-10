@@ -1,40 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News | AWiS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/f9a01ea1da.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header>
-        <nav class="container">
-            <a href="index.html"><img src="assets/img/logo.svg" alt="Logo"></a>
-            <ul>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li class="active"><a href="news.html">News</a></li>
-                <li><a href="opportunities.html">Opportunities</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
 
     <main id="news-details">
         <section class="container">
             <h2>AWiS News & Events</h2>
             <div class="row">
                 <div class="col-12">
-                    <img src="assets/img/news-details1.png" alt="Lorem"> 
-                    <h3>Lorem ipsum</h3>
-                    <p class="news-date">DD/MM/YYY HH:MM</p>
-                    <p class="news-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem. In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.</p>
+                    <img src="{{news.image.url}}" alt="Lorem"> 
+                    <h3>{{news.title}}</h3>
+                    <p class="news-date">{{news.created_at}}</p>
+                    <p class="news-desc"> {{news.description|safe}}</p>
                 </div>
             </div>
             <div class="news-link">
@@ -44,37 +23,5 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-7">
-                    <img src="assets/img/logo_footer.svg" alt="Logo">
-                    <p>Azerbaijani Women in Science (AWiS) aims to bring more Azerbaijani girls to STEM and STEM related disciplines to maintain the educated society.</p>
-                    <p class="mt-4">Join our mailing list to receive updates about our new projects and opportunities as well as useful materials</p>
-                    <form action="">
-                        <input type="email" placeholder="Your email">
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-                <div class="col-5">
-                    <p>E-mail: awis@gmail.com</p>
-                    <p>Tel: +994 99 899 92 26</p>
-                    <div class="social-media">
-                        <p>Follow us on social media channels:</p>
-                        <ul>
-                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-telegram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <p class="copyright">Copyright © 2022 AWiS. Created by AWiS Design team and WebCenter.az</p>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+
+{% endblock %}

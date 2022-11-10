@@ -71,7 +71,7 @@
                 <div class="section-text col-6">
                     <h2>Divercity is the key to solving our country’s biggest problems</h2>
                     <p>Created in Summer 2020 by Gunel Aghabayli, a young award-winning scientist, AWiS is a NPO which aims to increase the number of women in various fields of science and build a community of educated women in the country.</p>
-                    <a href="#" class="more">About Us <i class="fa-solid fa-angle-right"></i></a>
+                    <a href="/about/" class="more">About Us <i class="fa-solid fa-angle-right"></i></a>
                 </div>
                 <div class="section-img col-6">
                     <img src="{% static 'img/about-us.png' %}" alt="About us">
@@ -81,7 +81,7 @@
                 <div class="section-text col-6">
                     <h2>Being proactive is what makes AWiS exceptional</h2>
                     <p>AWiS proves to be one of the most motivated NPO organizations, driven to involve as many schoolgirls from Azerbaijani regions as possible to participate in tailored educational programs and scientific projects. </p>
-                    <a href="#" class="more">Projects <i class="fa-solid fa-angle-right"></i></a>
+                    <a href="/projects/" class="more">Projects <i class="fa-solid fa-angle-right"></i></a>
                 </div>
                 <div class="section-img col-6">
                     <img src="{% static 'img/projects.png' %}" alt="Projects">
@@ -91,7 +91,7 @@
                 <div class="section-text col-6">
                     <h2>Support the next generation of educated Azerbaijani females</h2>
                     <p>Become our partner in organizing impactful projects or support AWiS noble mission by becoming our donor. You can also joing our team as a volunteer or become an AWiS ambassador.</p>
-                    <a href="#" class="more">Opportunities <i class="fa-solid fa-angle-right"></i></a>
+                    <a href="/opportunities/" class="more">Opportunities <i class="fa-solid fa-angle-right"></i></a>
                 </div>
                 <div class="section-img col-6">
                     <img src="{% static 'img/opportunities.png' %}" alt="Opportunities">
@@ -188,7 +188,7 @@
                     <div class="news-owl-carousel owl-carousel owl-theme">
                         {% for i in news %}
                         <div class="item">
-                            <a href="news-details.html">
+                            <a href="{{ i.get_absolute_url }}">
                                 <div class="news-box">
                                     <div class="news-img" style="background-image: url( {{i.image.url}} );"></div>
                                     <p class="news-date">{{i.created_at}}</p>

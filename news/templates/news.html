@@ -9,9 +9,8 @@
             <div class="row">
 
                 {% for i in news %}
-
                 <div class="col-4">
-                    <a href="news-details.html">
+                    <a href="{{ i.get_absolute_url }}">
                         <div class="news-box">
                             <div class="news-img" style="background-image: url( {{i.image.url}} );"></div>
                             <p class="news-date"> {{ i.created_at }} </p>

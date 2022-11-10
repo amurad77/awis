@@ -23,34 +23,36 @@
             <div class="container">
                 <h3 class="section-title">AWiS achievements:</h3>
                 <div class="achivement-row">
+                    {% for i in statitics %}
                     <div class="achivement-box">
-                        <h3>15 projects</h3>
+                        <h3>{{i.projects}} projects</h3>
                         <p>local and international</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>10K EUR</h3>
+                        <h3>{{i.eur}}K EUR</h3>
                         <p>funds<br>raised</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>52 females</h3>
+                        <h3>{{i.females}} females</h3>
                         <p>AWiS volunteers</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>60 girls</h3>
+                        <h3>{{i.girls_mentees}} girls</h3>
                         <p>AWiS mentees</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>120 girls</h3>
+                        <h3>{{i.girls_regional}} girls</h3>
                         <p>regional ambassadors</p>
                     </div>
                     <div class="achivement-box">
-                        <h3>6k+</h3>
+                        <h3>{{i.followers}}k+</h3>
                         <p>social media followers </p>
                     </div>
                     <div class="achivement-box">
-                        <h3>50 women</h3>
+                        <h3>{{i.women}} women</h3>
                         <p>experts in network</p>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>

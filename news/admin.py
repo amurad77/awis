@@ -7,3 +7,4 @@ class NewsAdmin(admin.ModelAdmin):
     list_filter = ('title', 'description', 'created_at' )
     search_fields = ('title', 'description', 'created_at')
 admin.site.register (News, NewsAdmin)
+
