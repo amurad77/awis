@@ -23,6 +23,7 @@ def news(request):
     context = {
         'news': page_obj.object_list,
         'page_obj': page_obj,
+        'navbar': 'news'
     }
     return render(request, 'news.html', context)
 
@@ -30,7 +31,8 @@ def news_details(request, slug):
     news = get_object_or_404(News, slug = slug)
 
     context = {
-        'news' : news
+        'news' : news,
+        'navbar': 'news'
     }
 
     return render(request, 'news-details.html', context)

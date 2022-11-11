@@ -5,10 +5,10 @@
     <nav class="container">
         <a href="/index/"><img src="{% static 'img/logo.svg' %}" alt="Logo"></a>
         <ul>
-            <li><a href="/about/">About us</a></li>
-            <li><a href="/projects/">Projects</a></li>
-            <li><a href="/news/">News</a></li>
-            <li><a href="/opportunities/">Opportunities</a></li>
+            <li class="{% if navbar == 'about' %}   active  {% endif %}"><a href="/about/">About us</a></li>
+            <li class="{% if navbar == 'projects' %}   active  {% endif %}"> <a href="/projects/">Projects</a></li>
+            <li class="{% if navbar == 'news' %}   active  {% endif %}" ><a href="/news/">News</a></li>
+            <li class="{% if navbar == 'opportunities' %}   active  {% endif %}" ><a href="/opportunities/">Opportunities</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>

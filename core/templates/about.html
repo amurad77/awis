@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
   
+
+{% block title %}About | AWİS{% endblock %}
+
+
+
 {% block content %}
 
     <main id="about-us">
@@ -59,42 +64,15 @@
         <section class="partners container">
             <h2 class="section-title">Our trusted partners:</h2>
             <div class="row align-items-center text-center">
+
+
+                {% for i in partners %}
                 <div class="col-2">
-                    <img src="{% static 'img/partners/un-women.png' %}" alt="">
+                    <img src="{{ i.image.url }}" alt="">
                 </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/unfpa.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/undp.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/usaid.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/Embassy logo.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/unesco.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/image 114.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/Presidency Logo.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/UFAZ logo.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/femtech.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/gender-hub.png' %}" alt="">
-                </div>
-                <div class="col-2">
-                    <img src="{% static 'img/partners/asa.png' %}" alt="">
-                </div>
+
+                {% endfor %}
+
             </div>
         </section>
 

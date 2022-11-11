@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Subscribe, Involved, Statitics
+from .models import Subscribe, Involved, Statitics, Partners
 # Register your models here.
 
 
@@ -17,3 +17,5 @@ admin.site.register (Involved, InvolvedAdmin)
 
 
 admin.site.register (Statitics)
+
+admin.site.register (Partners)

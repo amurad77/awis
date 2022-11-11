@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
+
+{% block title %}News | AWİS{% endblock %}
+
   
 {% block content %}
 
@@ -12,7 +15,7 @@
                 <div class="col-4">
                     <a href="{{ i.get_absolute_url }}">
                         <div class="news-box">
-                            <div class="news-img" style="background-image: url( {{i.image.url}} );"></div>
+                            <div class="news-img" style="background-image: url( {{i.cover_image.url}} );"></div>
                             <p class="news-date"> {{ i.created_at }} </p>
                             <p class="news-title">{{i.title}}</p>
                         </div>

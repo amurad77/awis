@@ -14,6 +14,11 @@ MODEL_CHOICES= [
     ]
 
 
+
+class Partners(models.Model):
+    image = models.ImageField('Logo', upload_to = 'media/partners')
+
+
 class Subscribe(models.Model):
     # information
     email = models.EmailField('Email', max_length = 50, unique=True)

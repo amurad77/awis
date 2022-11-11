@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from news.models import News
-from core.models import Statitics
+from core.models import Statitics, Partners
 from django.shortcuts import render, get_object_or_404, HttpResponseRedirect, redirect
 from .forms import InvolvedForm
 from django.contrib import messages
@@ -9,10 +9,15 @@ from django.contrib import messages
 # Create your views here.
 
 def index(request):
+    partners = Partners.objects.all().order_by('-id')
+
     news = News.objects.all().order_by('-id')[0:4]
     
     context = {
-        'news': news
+        'news': news,
+        'partners': partners,
+        'navbar': 'home_page'
+
     }
     return render(request, 'index.html', context)
 
@@ -22,10 +27,13 @@ def index(request):
 
 
 def about(request):
+    partners = Partners.objects.all().order_by('-id')
     statitics = Statitics.objects.all()
 
     context = {
-        'statitics': statitics
+        'partners': partners,
+        'statitics': statitics,
+        'navbar': 'about'
     }
     return render(request, 'about.html', context)
 
@@ -40,13 +48,14 @@ def opportunities(request):
             messages.success(request, 'Thank you for your interest! We will reply to you within 2-3 working days.')
             print('Form save')
             # submitted = True
-            return HttpResponseRedirect('/opportunities/')
+            # return HttpResponseRedirect('/opportunities/')
         else:
             # form = ContactForm()
             # submitted = True
             print('Form is invalid')
 
     context = {
-        'form': form
+        'form': form,
+        'navbar': 'opportunities'
     }
     return render(request, 'opportunities.html', context)

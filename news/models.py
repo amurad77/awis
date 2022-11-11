@@ -9,7 +9,8 @@ from django.urls import reverse
 class News(models.Model):
     # information
     title = models.CharField('Title', max_length = 256)
-    image = models.ImageField("Image", upload_to = 'media/news_images')
+    cover_image = models.ImageField("Cover Image", upload_to = 'media/news_cover_images')
+    des_image = models.ImageField("Des Image", upload_to = 'media/news_des_images')
     description = tinymce_models.HTMLField('Description', max_length = 2000)
     slug = models.SlugField('Slug', max_length = 256, unique = True, editable = False)
 

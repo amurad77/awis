@@ -22,5 +22,7 @@ def projects(request):
     context = {
         'projects': page_obj.object_list,
         'page_obj': page_obj,
+        'navbar': 'projects'
+
     }
     return render(request, 'projects.html', context)
