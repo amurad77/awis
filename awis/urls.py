@@ -18,28 +18,16 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path, include
 from .router import router
-from core.views import (
-    index,
-    about,
-    opportunities,
-)
-from news.views import (
-    news,
-    news_details
-)
-from projects.views import (
-    projects
-)
+
 
 
 urlpatterns = [
     path('tinymce/', include('tinymce.urls')),
     path('admin/', admin.site.urls),
-    path('index/', index),
-    path('about/', about),
-    path('news/', news),
-    path('projects/', projects),
-    path('opportunities/', opportunities),
     path('api/', include(router.urls)),
-    path('news-detail/<slug:slug>/', news_details, name='news_details')
+    path('', include('core.urls')),
+    path('', include('news.urls')),
+    path('', include('projects.urls')),
+
+
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
