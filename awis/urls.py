@@ -32,7 +32,7 @@ urlpatterns = [
 
 
     path('tinymce/', include('tinymce.urls')),
-    path('admin/', admin.site.urls),
+    path('security/*/admin/', admin.site.urls),
     path('api/', include(router.urls)),
     path('', include('core.urls')),
     path('', include('news.urls')),
