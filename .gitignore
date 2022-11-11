@@ -3,3 +3,5 @@
 pgdb
 .pgdb
 ./pgdb
+.__pycache__
+./__pycache__
