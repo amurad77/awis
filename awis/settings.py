@@ -104,14 +104,15 @@ WSGI_APPLICATION = 'awis.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.getenv('POSTGRES_DB', 'awis'),
-            'USER': os.getenv('POSTGRES_USER', 'awis'),
-            'PORT': os.getenv('POSTGRES_PORT', 5432),
-            'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'awis5719'),
-            'HOST': os.getenv('POSTGRES_HOST', '127.0.0.1'),
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB', 'awis'),
+        'USER': os.getenv('POSTGRES_USER', 'awis'),
+        'PORT': os.getenv('POSTGRES_PORT', 5432),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'awis5719'),
+        'HOST': os.getenv('POSTGRES_HOST', '127.0.0.1'),
+        'PORT': os.environ.get('POSTGRES_PORT', '5432')
+    }
     #     'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
