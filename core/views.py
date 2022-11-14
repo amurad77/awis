@@ -38,6 +38,8 @@ def about(request):
     return render(request, 'about.html', context)
 
 def opportunities(request):
+    partners = Partners.objects.all().order_by('-id')
+
     form = InvolvedForm()
     if request.method == 'POST':
         contact_data = request.POST
@@ -55,6 +57,7 @@ def opportunities(request):
             print('Form is invalid')
 
     context = {
+        'partners': partners,
         'form': form,
         'navbar': 'opportunities'
     }
