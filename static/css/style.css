@@ -412,6 +412,9 @@ footer .copyright {
 #about-us .partners .col-2 {
     margin-bottom: 60px;
 }
+#about-us .partners .col-2 img {
+    width: 100%;
+}
 
 #about-us .board-members .row {
     padding: 80px 0;
@@ -689,11 +692,15 @@ footer .copyright {
 .interest-form .form-input:nth-child(5) i:last-child {
     left: auto;
     right: 10px;
+    z-index: -1;
 }
 select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    background: transparent !important;
+}
+select:invalid {
     color: #94A3B8;
 }
 .interest-form textarea {

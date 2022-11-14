@@ -99,7 +99,7 @@
 
         <section class="interest-form container">
             <h3>Fill the form to let us know about your interest in AWiS</h3>
-            <form action="#" method="post">
+            <form action="#" method="post" id="interest-form">
                 <div class="row">
                     <div class="col-5">
                         {% csrf_token %}
@@ -145,7 +145,7 @@
         </section>
 
         <section class="partners container">
-            <h2 class="section-title">Our trusted partners:</h2>
+            <h3 class="section-title">Our trusted partners:</h3>
             <div class="partners-owl-carousel owl-carousel owl-theme">
                 <div class="item">
                     <img src="{% static 'img/partners/un-women.png' %}" alt="">
@@ -191,6 +191,13 @@
     <script src="{% static 'owlcarousel/js/owl.carousel.min.js' %}"></script>
 
     <script>
+        var selectOption = document.getElementById("id_membership_type");
+        setTimeout(function() {
+            selectOption.setAttribute("required", "");
+            selectOption.children[0].setAttribute("value", "");
+            selectOption.children[0].setAttribute("disabled", "");
+        }, 2000);
+        
         var partnersOwl = $('.partners-owl-carousel');
         partnersOwl.owlCarousel({
             loop:true,
