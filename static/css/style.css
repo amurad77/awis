@@ -20,6 +20,12 @@ ul {
    list-style: none;
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
 
 /**************** NAVBAR ****************/
 header {
@@ -162,8 +168,17 @@ section .section-title,
 .areas .box {
     background-color: #F1FAFF;
     border-radius: 8px;
-    padding: 16px;
+    padding: 20px 16px 28px;
     height: 100%;
+}
+.areas .box > div {
+    padding: 8px 0 4px 5px;
+}
+.areas .row {
+    margin: 0 -18px;
+}
+.areas .col-4 {
+    padding: 0 18px;
 }
 .areas .col-4:first-child .box {
     background-color: #EEF2FF;
@@ -176,6 +191,7 @@ section .section-title,
     font-weight: 600;
     display: inline-block;
     margin-left: 12px;
+    margin-bottom: 0;
 }
 .areas .box ul {
     list-style-type: disc;
@@ -183,7 +199,9 @@ section .section-title,
     margin-top: 24px;
 }
 .areas .box ul li {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #0F172A;
 }
 
 
@@ -307,9 +325,6 @@ footer > div {
 footer .row {
     margin: 0 100px;
 }
-footer .col-7 {
-    padding-right: 100px;
-}
 footer img {
     margin-bottom: 32px;
 }
@@ -341,6 +356,7 @@ footer .social-media ul li a:hover {
 }
 footer .copyright {
     margin-top: 65px;
+    margin-left: 107.5px;
     color: #9B9B9A;
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -442,7 +458,6 @@ footer .copyright {
     padding-bottom: 80px;
 }
 #about-us .coreteam > p {
-    width: 50%;
     margin-bottom: 32px;
     font-weight: 400;
     font-size: 18px;
@@ -634,6 +649,11 @@ footer .copyright {
 
 
 /**************** OPPORTUNITIES PAGE ****************/
+#opportunities  .banner p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 16px;
+}
 #opportunities .areas {
     margin-top: 70px;
     margin-bottom: 100px;
@@ -643,17 +663,10 @@ footer .copyright {
 }
 #opportunities .areas .box {
     padding: 28px 16px;
-    margin: 0 8px;
-}
-#opportunities .areas .col-4:first-child .box {
-    margin-left: 0;
-}
-#opportunities .areas .col-4:last-child .box {
-    margin-right: 0;
 }
 #opportunities .areas .box h4 {
-    margin-top: 16px;
-    margin-bottom: 20px;
+    margin-top: 12px;
+    margin-bottom: 18px;
     font-size: 1.6rem;
     font-weight: 600;
     line-height: 2.4rem;

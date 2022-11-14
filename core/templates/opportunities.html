@@ -101,7 +101,7 @@
             <h3>Fill the form to let us know about your interest in AWiS</h3>
             <form action="#" method="post" id="interest-form">
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-4" style="padding: 0 17px;">
                         {% csrf_token %}
                         <div class="form-input">
                             {{form.name}}
@@ -130,11 +130,11 @@
                             <option value="donor">Donor</option> -->
                         <!-- </select> -->
                     </div>
-                    <div class="col-7">
+                    <div class="col-8" style="padding: 0 17px;">
                         <!-- <textarea cols="30" rows="10" placeholder="Tell us more..."></textarea> -->
                         {{form.message}}
                     </div>
-                    <div class="col-12 text-end">
+                    <div class="col-12 text-end" style="padding-right: 17px;">
                         <button type="submit">Submit the form</button>
                         {% for message in messages %}
                         <p class="text-success">{{message}}</p>        
