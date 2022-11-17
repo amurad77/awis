@@ -6,7 +6,7 @@ form.addEventListener('submit', async function (e) {
     let form_data = {
         'email': form.email.value
     }
-    let response = await fetch('https://awiscience/api/subscribe/', {
+    let response = await fetch('https://awiscience.az/api/subscribe/', {
         headers: {
             'content-type': 'application/json',
             "X-CSRFToken": form.csrfmiddlewaretoken.value
@@ -39,7 +39,7 @@ let form2 = document.getElementById('form-subscribe');
             let form_data = {
                 'email': form2.email.value
             }
-            let response = await fetch('https://awiscience/api/subscribe/', {
+            let response = await fetch('https://awiscience.az/api/subscribe/', {
                 headers: {
                     'content-type': 'application/json',
                     "X-CSRFToken": form.csrfmiddlewaretoken.value
