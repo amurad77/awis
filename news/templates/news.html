@@ -16,7 +16,7 @@
                     <a href="{{ i.get_absolute_url }}">
                         <div class="news-box">
                             <div class="news-img" style="background-image: url( {{i.cover_image.url}} );"></div>
-                            <p class="news-date"> {{ i.created_at }} </p>
+                            <p class="news-date"> {{ i.created_at|date:"F d, Y" }} </p>
                             <p class="news-title">{{i.title}}</p>
                         </div>
                     </a>
