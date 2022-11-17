@@ -281,8 +281,8 @@ section .section-title,
     transition: 0.5s;
 }
 .news-box:hover {
-    border-color: #4F46E5;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-color: #6366F1;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 .news-box .news-img {
     background-color: #E2E8F0;
