@@ -428,7 +428,10 @@ footer .copyright {
     margin-bottom: 60px;
 }
 #about-us .partners .col-2 img {
-    width: 100%;
+    width: auto !important;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0 auto;
 }
 
 #about-us .board-members .row {
